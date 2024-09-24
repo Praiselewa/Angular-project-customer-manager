@@ -1,0 +1,59 @@
+<div class="form-container">
+  <mat-toolbar>
+    <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button> -->
+    <span (click)="goToCustomers()">Customer Manager</span>
+    <span class="example-spacer"></span>
+  </mat-toolbar>
+  <form class="example-form" [formGroup]="customerFormGroup">
+    <h2>Contact Form</h2>
+    <mat-form-field class="example-full-width">
+      <mat-label>Name</mat-label>
+      <input type="text" formControlName="name" matInput placeholder="Enter Name">
+      <mat-error *ngIf="customerFormGroup.get('name')?.hasError('required')">
+        Please enter your <strong>name!</strong>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input type="email" formControlName="email" matInput placeholder="Enter Email">
+      <mat-error
+        *ngIf="customerFormGroup.get('email')?.hasError('email') && !customerFormGroup.get('email')?.hasError('required')">
+        Please enter a valid email address
+      </mat-error>
+      <mat-error *ngIf="customerFormGroup.get('email')?.hasError('required')">
+        Please enter <strong>email address!</strong>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Phone</mat-label>
+      <input type="text" formControlName="phone" matInput placeholder="Enter Phone">
+      <mat-error
+        *ngIf="customerFormGroup.get('phone')?.hasError('phone') && !customerFormGroup.get('phone')?.hasError('required')">
+        Please enter a valid phone number
+      </mat-error>
+      <mat-error *ngIf="customerFormGroup.get('phone')?.hasError('required')">
+        Please enter <strong>phone number!</strong> 
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Address</mat-label>
+      <input type="text" formControlName="address" matInput placeholder="Enter Address">
+      <mat-error *ngIf="customerFormGroup.get('address')?.hasError('required')">
+        Address is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Gender</mat-label>
+      <input type="text" formControlName="gender" matInput placeholder="Enter Gender">
+      <mat-error *ngIf="customerFormGroup.get('gender')?.hasError('required')">
+        Gender is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <button
+      (click)="pathname === 'view-customer' ? goToCustomers() : pathname === 'edit-customer' ? onEdit() :onCreate()"
+      mat-raised-button class="example-icon favorite-icon">{{pathname === 'view-customer' ? 'Go Back' : pathname ===
+      'edit-customer' ? 'Edit': 'Save'}}</button>
+  </form>
+</div>

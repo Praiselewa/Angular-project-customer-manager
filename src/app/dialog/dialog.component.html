@@ -1,0 +1,27 @@
+<h1 mat-dialog-title>Customer Data</h1>
+<div mat-dialog-content>
+  <div class="row">
+    <p class="key">Name:</p>
+    <p class="value">{{data.name}}</p>
+  </div>
+  <div class="row">
+    <p class="key">Email:</p>
+    <p class="value">{{data.email}}</p>
+  </div>
+  <div class="row">
+    <p class="key">Phone:</p>
+    <p class="value">{{data.phone}}</p>
+  </div>
+  <div class="row">
+    <p class="key">Address:</p>
+    <p class="value">{{data.address.street}}</p>
+  </div>
+  <div class="row">
+    <p class="key">Gender:</p>
+    <p class="value">{{data.gender}}</p>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Done</button>
+  <!-- <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button> -->
+</div>

@@ -1,0 +1,55 @@
+mat-toolbar {
+  padding: 40px 15px !important;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  margin: 0 20px;
+}
+mat-form-field {
+  border-radius: 8px !important;
+  margin: 0 8px !important;
+}
+.example-button-container {
+  display: flex;
+  align-items: center !important;
+  justify-content: center !important;
+}
+mat-icon {
+  margin: 0 10px;
+  cursor: pointer;
+  color: antiquewhite;
+}
+.header {
+  width: 100%;
+  text-align: center;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.demo-table {
+  width: 100%;
+}
+
+.mat-column-demo-position {
+  width: 32px;
+  border-right: 1px solid currentColor;
+  padding-right: 24px;
+  text-align: center;
+}
+
+.mat-column-demo-name {
+  padding-left: 16px;
+  font-size: 20px;
+}
+
+.mat-column-demo-weight {
+  font-style: italic;
+}
+
+.mat-column-demo-symbol {
+  width: 32px;
+  text-align: center;
+  font-weight: bold;
+}
